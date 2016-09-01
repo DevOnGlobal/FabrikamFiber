@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<RunSettings>
+  <TestRunParameters>
+    <Parameter name="APP_URL" value="http://localhost:16535/"/>
+    <Parameter name="SELENIUM_GRID_URL" value="http://cdin90days-sonar.westeurope.cloudapp.azure.com:4445/wd/hub"/>
+  </TestRunParameters>
+</RunSettings>
