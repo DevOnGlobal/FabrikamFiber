@@ -4,6 +4,7 @@ namespace FabrikamFiber.Web.Controllers
 
     using DAL.Data;
     using DAL.Models;
+    using System;
 
     public class CustomersController : Controller
     {
@@ -32,6 +33,8 @@ namespace FabrikamFiber.Web.Controllers
         [HttpPost]
         public ActionResult Create(Customer customer)
         {
+            if (customer == null) throw new ArgumentNullException(nameof(customer));
+
             //check model state
             if (ModelState.IsValid)
             {
