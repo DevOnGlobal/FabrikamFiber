@@ -177,7 +177,7 @@
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <None Include="Content\fonts\segoewp-bold-webfont.eot" />
+    <Content Include="Content\fonts\segoewp-bold-webfont.eot" />
     <None Include="Content\fonts\segoewp-bold-webfont.ttf" />
     <None Include="Content\fonts\segoewp-bold-webfont.woff" />
     <None Include="Content\fonts\segoewp-light-webfont.eot" />

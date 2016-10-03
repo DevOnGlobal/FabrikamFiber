@@ -4,6 +4,7 @@
 
     using FabrikamFiber.DAL.Data;
     using FabrikamFiber.Web.ViewModels;
+    using System;
 
     public class HomeController : Controller
     {
@@ -26,15 +27,21 @@
 
         public ActionResult Index()
         {
-            var viewModel = new DashboardViewModel
+            try
             {
-                ScheduleItems = this.scheduleItemRepository.All,
-                Messages = this.messageRepository.All,
-                Alerts = this.alertRepository.All,
-                Tickets = this.serviceTickets.AllIncluding(serviceticket => serviceticket.Customer, serviceticket => serviceticket.CreatedBy, serviceticket => serviceticket.AssignedTo),
-            };
+                var viewModel = new DashboardViewModel
+                {
+                    ScheduleItems = this.scheduleItemRepository.All,
+                    Messages = this.messageRepository.All,
+                    Alerts = this.alertRepository.All,
+                    Tickets = this.serviceTickets.AllIncluding(serviceticket => serviceticket.Customer, serviceticket => serviceticket.CreatedBy, serviceticket => serviceticket.AssignedTo),
+                };
 
-            return View(viewModel);
+                return View(viewModel);
+            } catch (Exception ex)
+            {
+                return Json(ex.ToString());
+            }
         }
     }
 }
