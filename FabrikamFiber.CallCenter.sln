@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.UITests", "Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.UnitTests", "FabrikamFiber.UnitTests\FabrikamFiber.UnitTests.csproj", "{C5F8A262-37F8-43C0-A5C4-4823F019F3FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{1EC2F445-98BF-4E9F-A014-615293F48C38}"
+	ProjectSection(SolutionItems) = preProject
+		config\FabrikamFiber.Web.SetParameters.Test.xml = config\FabrikamFiber.Web.SetParameters.Test.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
